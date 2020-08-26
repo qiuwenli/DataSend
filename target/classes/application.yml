@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.3.212:1433;DatabaseName=NBLGMDD
+    username: sa
+    password: 123456
+  application:
+    name: dataSend
+  task:
+    execution:
+      pool:
+        max-size: 16
+        queue-capacity: 100
+        keep-alive: 10s
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  type-aliases-package: com.lgom.transport.model
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+server:
+  port: 8084
+#self definition
+thrift:
+  serverIp: 192.144.137.82 #127.0.0.1 #123.127.143.249
+  serverPort: 7911 #8090 #
+  timeout: 30000
+  username: ems
+  password: H9000ems
+
+
+schedule:
+  cron:
+    gcData: 0/5 * * * * ?
+    gcGram: 0/5 * * * * ?
+    pdmReal: 0/5 * * * * ?
+isServer: 0 # 0  为数据获取端 , 1位数据发送端
+
+
+
+

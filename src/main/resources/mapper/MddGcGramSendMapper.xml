@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgom.transport.dao.MddGcGramSendMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lgom.transport.model.MddGcGramSend">
+        <id column="id" property="id" />
+        <result column="objId" property="objId" />
+        <result column="objName" property="objName" />
+        <result column="gramTime" property="gramTime" />
+        <result column="gramData" property="gramData" />
+        <result column="gramType" property="gramType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, objId, objName, gramTime, gramData, gramType
+    </sql>
+
+</mapper>

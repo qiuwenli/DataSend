@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgom.transport.dao.PdmRealSendMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lgom.transport.model.PdmRealSend">
+        <id column="id" property="id" />
+        <result column="objId" property="objId" />
+        <result column="objName" property="objName" />
+        <result column="unitId" property="unitId" />
+        <result column="unitName" property="unitName" />
+        <result column="dataTime" property="dataTime" />
+        <result column="filePos" property="filePos" />
+        <result column="PDCount" property="pdCount" />
+        <result column="maxAmp" property="maxAmp" />
+        <result column="faultNote" property="faultNote" />
+        <result column="status" property="status" />
+        <result column="avgAmp" property="avgAmp" />
+        <result column="maxPhase" property="maxPhase" />
+        <result column="libCode" property="libCode" />
+        <result column="faultCode" property="faultCode" />
+        <result column="faultName" property="faultName" />
+        <result column="dangerVal" property="dangerVal" />
+        <result column="freqPoint" property="freqPoint" />
+        <result column="PTOffset" property="ptOffset" />
+        <result column="RstData" property="rstData" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, objId, objName, unitId, unitName, dataTime, filePos, PDCount, maxAmp, faultNote, status, avgAmp, maxPhase, libCode, faultCode, faultName, dangerVal, freqPoint, PTOffset, RstData
+    </sql>
+
+</mapper>
